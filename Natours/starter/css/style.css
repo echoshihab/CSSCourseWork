@@ -45,3 +45,30 @@ body {
 .logo {
   height: 35px; /* if you specify height, width gets figured out, if you specify width height gets figured out */
 }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 17.4px;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%; /* of parent element */
+  left: 50%; /* of parent element */
+  /* shift 50% of element width, and 50% of element height */
+  transform: translate(-50%, -50%);
+}
