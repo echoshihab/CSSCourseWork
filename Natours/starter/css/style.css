@@ -42,13 +42,13 @@ body {
   position: relative; /* this is for the reference for logo box */
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
 
-.logo {
+.header__logo {
   height: 3.5rem; /* if you specify height, width gets figured out, if you specify width height gets figured out */
 }
 
@@ -59,7 +59,7 @@ body {
   margin-bottom: 6rem;
 }
 
-.heading-primary-main {
+.heading-primary--main {
   display: block;
   font-size: 6rem;
   font-weight: 400;
@@ -67,7 +67,7 @@ body {
   animation: moveInLeft 1s, ease-out;
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   font-size: 2rem;
   display: block;
   font-weight: 700;
@@ -75,7 +75,7 @@ body {
   animation: moveInRight 1s ease-out;
 }
 
-.text-box {
+.header__text-box {
   position: absolute;
   top: 40%; /* of parent element */
   left: 50%; /* of parent element */
@@ -151,7 +151,7 @@ body {
   that the button is further away from user and closer to surface with less shadow */
 }
 
-.btn-white {
+.btn--white {
   background-color: #fff;
   color: #777;
 }
@@ -169,7 +169,7 @@ body {
   transition: all 0.4s;
 }
 
-.btn-white::after {
+.btn--white::after {
   background-color: #fff;
 }
 
@@ -178,7 +178,7 @@ body {
   opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
 }
