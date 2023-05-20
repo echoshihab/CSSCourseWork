@@ -28,15 +28,21 @@ body {
           clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative; /* this is for the reference for logo box */
 }
-
 .header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
-
 .header__logo {
   height: 3.5rem; /* if you specify height, width gets figured out, if you specify width height gets figured out */
+}
+.header__text-box {
+  position: absolute;
+  top: 40%; /* of parent element */
+  left: 50%; /* of parent element */
+  /* shift 50% of element width, and 50% of element height */
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .heading-primary {
@@ -45,7 +51,6 @@ body {
   backface-visibility: hidden;
   margin-bottom: 6rem;
 }
-
 .heading-primary--main {
   display: block;
   font-size: 6rem;
@@ -53,22 +58,12 @@ body {
   letter-spacing: 3.5rem;
   animation: moveInLeft 1s, ease-out;
 }
-
 .heading-primary--sub {
   font-size: 2rem;
   display: block;
   font-weight: 700;
   letter-spacing: 1.75rem;
   animation: moveInRight 1s ease-out;
-}
-
-.header__text-box {
-  position: absolute;
-  top: 40%; /* of parent element */
-  left: 50%; /* of parent element */
-  /* shift 50% of element width, and 50% of element height */
-  transform: translate(-50%, -50%);
-  text-align: center;
 }
 
 @keyframes moveInLeft {
@@ -107,8 +102,7 @@ body {
     transform: translateY(0);
   }
 }
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -118,24 +112,27 @@ body {
   position: relative; /* this is for the reference for btn after */
   font-size: 1.6rem;
 }
-
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
-
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
 .btn:active {
   transform: translateY(-1px);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   /* the box shadow is less here so that when clicking button it gives the impression
   that the button is further away from user and closer to surface with less shadow */
 }
-
 .btn--white {
   background-color: #fff;
   color: #777;
 }
-
+.btn--white::after {
+  background-color: #fff;
+}
 .btn::after {
   content: "";
   display: inline-block;
@@ -148,16 +145,6 @@ body {
   z-index: -1;
   transition: all 0.4s;
 }
-
-.btn--white::after {
-  background-color: #fff;
-}
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
-
 .btn--animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
