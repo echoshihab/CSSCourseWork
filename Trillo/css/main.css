@@ -109,6 +109,9 @@ body {
 
 .user-reviews {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .logo {
@@ -328,6 +331,16 @@ body {
   cursor: pointer;
   transition: all 0.2s;
 }
+.btn-inline span {
+  margin-left: 3px;
+  transition: margin-left 0.2s;
+}
+.btn-inline:hover {
+  color: var(--color-grey-dark-1);
+}
+.btn-inline:hover span {
+  margin-left: 8px;
+}
 .btn-inline:hover {
   color: var(--color-grey-dark-1);
 }
@@ -406,12 +419,12 @@ body {
   padding: 3rem;
   margin-bottom: 3.5rem;
   position: relative;
+  overflow: hidden;
 }
 .review__text {
   margin-bottom: 2rem;
   z-index: 10;
   position: relative;
-  overflow: hidden;
 }
 .review__photo {
   height: 4.5rem;
